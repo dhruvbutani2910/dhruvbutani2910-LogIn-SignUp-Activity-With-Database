@@ -69,7 +69,6 @@ class LoginScreen : AppCompatActivity() {
 
                             val verification = auth.currentUser?.isEmailVerified
                             if (verification == true) {
-                                val user = auth.currentUser
                                 Toast.makeText(this, "Successfully LoggedIn", Toast.LENGTH_SHORT)
                                     .show()
                                 startActivity(Intent(this, MainActivity2::class.java))

@@ -53,7 +53,6 @@ class signup_screen : AppCompatActivity() {
                 auth.createUserWithEmailAndPassword(emaill, ppasword)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
-
                             auth.currentUser?.sendEmailVerification()
                                 ?.addOnSuccessListener {
                                     Toast.makeText(
