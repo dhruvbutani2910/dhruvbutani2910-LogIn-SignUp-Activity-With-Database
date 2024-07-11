@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LogIn-SignUp</string>
+    <string name="default_web_client_id" />
+</resources>

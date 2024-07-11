@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1018581059908",
+    "project_id": "logi_sign-2883a",
+    "storage_bucket": "logi_sign-2883a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018581059908:android:73bdb3b5279e8e74002f11",
+        "android_client_info": {
+          "package_name": "com.example.logi_sign"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjZKlhyFRbiRsA2YN9tD-jndaNSt3wboI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
