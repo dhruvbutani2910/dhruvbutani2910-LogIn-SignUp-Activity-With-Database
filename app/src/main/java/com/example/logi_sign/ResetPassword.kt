@@ -37,19 +37,22 @@ class ResetPassword : AppCompatActivity() {
 
             val sPassword = etPassword.text.toString()
 
-            auth.sendPasswordResetEmail(sPassword)
-                .addOnSuccessListener {
-                    Toast.makeText(
-                        this,
-                        "Reset Link Sent, Please Check Your Email..",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-                .addOnFailureListener {
-                    Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
-                }
-
-
+            if (sPassword.isEmpty()) {
+                Toast.makeText(this, "Please Fill All The Details", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                auth.sendPasswordResetEmail(sPassword)
+                    .addOnSuccessListener {
+                        Toast.makeText(
+                            this,
+                            "Reset Link Sent, Please Check Your Email..",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                    .addOnFailureListener {
+                        Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
+                    }
+            }
         }
     }
 }

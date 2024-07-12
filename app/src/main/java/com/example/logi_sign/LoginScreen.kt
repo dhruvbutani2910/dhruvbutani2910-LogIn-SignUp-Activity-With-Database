@@ -1,6 +1,5 @@
 package com.example.logi_sign
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -12,25 +11,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 
 class LoginScreen : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-
-
-    @SuppressLint("MissingInflatedId")
-    override fun onStart() {
-        super.onStart()
-        val currentUser: FirebaseUser? = auth.currentUser
-        if (currentUser != null) {
-            startActivity(Intent(this, MainActivity2::class.java))
-            finish();
-        } else {
-            startActivity(Intent(this, LoginScreen::class.java))
-            finish();
-        }
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
